@@ -15,9 +15,9 @@ class SlackCli < Formula
   depends_on "python3"
 
   def install
-    bin.install "slack-cli.sh" => "slack-bash"
+    bin.install "slack-cli.sh" => "slackchat"
     # Make sure the script is executable
-    chmod 0755, bin/"slack-bash"
+    chmod 0755, bin/"slackchat"
   end
 
   def caveats
@@ -26,25 +26,25 @@ class SlackCli < Formula
 
       To get started:
       1. Add to your shell config (~/.zshrc or ~/.bashrc):
-         source #{HOMEBREW_PREFIX}/bin/slack-bash
+         source #{HOMEBREW_PREFIX}/bin/slackchat
       2. Reload your shell: source ~/.zshrc
-      3. Run setup: slack-bash init
+      3. Run setup: slackchat init
 
-      Note: This installs as 'slack-bash' to coexist with official Slack CLI.
-      Use 'slack-bash' instead of 'slack' to avoid conflicts.
+      Note: This installs as 'slackchat' to coexist with official Slack CLI.
+      Use 'slackchat' instead of 'slack' to avoid conflicts.
 
-      The 'slack-bash init' command will guide you through:
+      The 'slackchat init' command will guide you through:
       - Getting a Slack token
       - Storing it securely
       - Testing the connection
 
-      Then use: slack-bash help
+      Then use: slackchat help
     EOS
   end
 
   test do
     # Test that the script exists and is executable
-    assert_match "Slack CLI", shell_output("#{bin}/slack-bash help 2>&1", 1)
+    assert_match "Slack CLI", shell_output("#{bin}/slackchat help 2>&1", 1)
   end
 end
 
