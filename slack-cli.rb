@@ -25,13 +25,15 @@ class SlackCli < Formula
       Slack CLI has been installed!
 
       To get started:
-      1. Get a Slack token from https://api.slack.com/apps
-      2. Store it securely:
-         echo 'xoxp-your-token' > ~/.slack_token
-         chmod 600 ~/.slack_token
-      3. Add to your shell config (~/.zshrc or ~/.bashrc):
+      1. Add to your shell config (~/.zshrc or ~/.bashrc):
          source #{HOMEBREW_PREFIX}/bin/slack
-      4. Reload your shell: source ~/.zshrc
+      2. Reload your shell: source ~/.zshrc
+      3. Run setup: slack init
+
+      The 'slack init' command will guide you through:
+      - Getting a Slack token
+      - Storing it securely
+      - Testing the connection
 
       Then use: slack help
     EOS
