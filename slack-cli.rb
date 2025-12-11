@@ -26,16 +26,19 @@ class SlackCli < Formula
 
       To get started:
       1. Add to your shell config (~/.zshrc or ~/.bashrc):
-         source #{HOMEBREW_PREFIX}/bin/slack
+         source #{HOMEBREW_PREFIX}/bin/slack-bash
       2. Reload your shell: source ~/.zshrc
-      3. Run setup: slack init
+      3. Run setup: slack-bash init
 
-      The 'slack init' command will guide you through:
+      Note: This installs as 'slack-bash' to coexist with official Slack CLI.
+      Use 'slack-bash' instead of 'slack' to avoid conflicts.
+
+      The 'slack-bash init' command will guide you through:
       - Getting a Slack token
       - Storing it securely
       - Testing the connection
 
-      Then use: slack help
+      Then use: slack-bash help
     EOS
   end
 
